@@ -5,8 +5,16 @@ void moves(){}
 
 void check_win(){}
 
-void draw(){}
+void check_draw(){}
+
+void print_board(){}
 
 int main(){
-    
+    int n;
+
+    printf("Enter the board size you want to play");
+    scanf("%d", &n);
+
+
+
 }
