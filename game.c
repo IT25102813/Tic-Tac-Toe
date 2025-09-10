@@ -15,6 +15,6 @@ int main(){
     printf("Enter the board size you want to play");
     scanf("%d", &n);
 
-
+    
 
 }
