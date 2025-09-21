@@ -1,37 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void moves(){}
-
-void check_win(){}
-
-void check_draw(){}
-
-void print_board(int n){
+void initial_board(int size){
     int i = 0;
     int j = 0;
 
     char board[10][10];
     printf("\n");
-    for (i = 0; i < n; i++)         //creating the row
+    for (i = 0; i < size; i++)         //creating the row
     {
-        for (j = 0; j < n; j++)
+        for (j = 0; j < size; j++)
         {
             board[i][j] = ' ';
             printf("%c", board[i][j]);
-            if (j < n - 1)          //reducing one so it will place between two columns except the last
+            if (j < size - 1)          //reducing one so it will place between two columns except the last
             {    
                 printf(" | ");      //dividing the columns
             }
         }
         printf("\n");
 
-        if (i < n - 1)              //reducing one to place between two rows except the last
+        if (i < size - 1)              //reducing one to place between two rows except the last
         {   
-            for (int k = 0; k < n; k++)
+            for (int k = 0; k < size; k++)
             { 
-                printf("--");
-                if (k < n - 1)
+                printf("---");
+                if (k < size - 1)
                 {
                     printf("+");
                 }
@@ -44,14 +38,51 @@ void print_board(int n){
     
 }
 
+void display_board(int size){}
+
+void accept_user_input(){}
+
+void validate_user_input(){}
+
+void check_win(){}
+
+void check_draw(){}
+
 int main(){
-    int n;
+    int size, 
+        play_type,
+        end_type,
+        winner;
 
     printf("Enter the board size you want to play ");
-    scanf("%d", &n);
+    scanf("%d", &size);
 
-    print_board(n);
+    initial_board(size);
+
+    printf("Enter type of play: \nPlayer vs Player: 1\nPlayer vs Computer: 2\nPlayer vs Player vs Computer: 3\n Player vs Computer vs Computer\n");
+    scanf("%d", &play_type);
+
+    for (int i = 0; i < size; i++)
+    {
+        if (play_type == 1)
+        {
+
+        }
+        else if (play_type == 2)
+        {
+            
+        }
+        else if (play_type == 3)
+        {
+            
+        }
+        else if (play_type == 4)
+        {
+
+        }
+    }
+
     
-    
+
     return 0;
 }
